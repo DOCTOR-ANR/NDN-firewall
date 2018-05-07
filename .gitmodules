@@ -1,6 +1,6 @@
 [submodule "cuckoofilter"]
 	path = cuckoofilter
-	url = git@github.com:daishi-kondo/cuckoofilter.git
+	url = https://github.com/daishi-kondo/cuckoofilter.git
 [submodule "rapidjson"]
 	path = rapidjson
-	url = git@github.com:daishi-kondo/rapidjson.git
+	url = https://github.com/daishi-kondo/rapidjson.git
