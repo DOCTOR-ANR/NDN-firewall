@@ -1,5 +1,5 @@
-#NDN Firewall (ndnfirewall)
-##Overview
+# NDN Firewall (ndnfirewall)
+## Overview
 **ndnfirewall** is a firewall for [Named Data Networking (NDN)](https://named-data.net/), which is completely decoupled from [NDN Forwarding Daemon (NFD)](http://named-data.net/doc/NFD/current/).
 Currently, the firewall supports Interest packet filtering based on a name or name prefixes in the Interest with the whitelist and the blacklist.
 Each of the lists installs a [cuckoo filter](https://github.com/efficient/cuckoofilter), which is a probabilistic filter such as a bloom filter.
@@ -8,13 +8,13 @@ The names and the name prefixes registered in the lists can be updated on the fl
 To perform Proof of Concept (PoC), the firewall utilizes IP network to transport NDN packets using TCP.
 When a user of the firewall updates the lists, the firewall uses IP network to receive the command written by JSON format using UDP.
 
-##Requirements
+## Requirements
 * ndn-cxx
 * NFD
 * Boost libraries
 * cmake
 
-##Install
+## Install
 Clone the repository with **--recursive** option to install submodules.  
 
 ```
@@ -30,11 +30,11 @@ $ cmake . && make
 
 **ndnfirewall** program should be created under the **bin** directory.
 
-##NDN Firewall Management
+## NDN Firewall Management
 The NDN firewall launch command is used once in order to activate the NDN firewall.
 On the other hand, after the activation, the NDN firewall online command is available to update rules in real time.
 
-###NDN Firewall Launch Command
+### NDN Firewall Launch Command
 The NDN firewall program is called **ndnfirewall**, and it can be run in the following way:
 
 ```
@@ -73,7 +73,7 @@ usage: ./bin/ndnfirewall [options...]
  -h		help
 ```
 
-###NDN Firewall Online Command
+### NDN Firewall Online Command
 The NDN firewall online command is written in JSON format. 
 Here is one simplified example of the online command.
 
@@ -103,5 +103,5 @@ The value of **mode** for **post** has to be an array including **accept** or **
 Each value of **append-accept**, **append-drop**, **delete-accept**, and **delete-drop** also has to be an array including name prefixes, and after receiving each of the pairs, the NDN firewall appends or deletes rules which accepts or drops Interests based on name prefixes in the whitelist or the blacklist.
 If the online command is syntactically wrong, the NDN firewall rejects it.
 
-##Contributing
+## Contributing
 Contributions via GitHub pull requests are welcome!!
