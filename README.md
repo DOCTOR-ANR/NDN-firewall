@@ -63,14 +63,14 @@ Here is the NDN firewall usage displayed by **-h**.
 $ ./bin/ndnfirewall -h
 version: 0.1.0
 usage: ./bin/ndnfirewall [options...]
- -m		mode ([-m accept] or [-m drop])					# default = accept
- -w		# of items in whitelist (e.g., [-w 1000000])	# default = 1000000
- -b		# of items in blacklist (e.g., [-b 1000000])	# default = 1000000
- -lp	local port # (e.g., [-lp 6361])					# default = 6361
- -lpc	local port # for command (e.g., [-lpc 6362])	# default = 6362
- -ra	remote address (e.g., [-ra 127.0.0.1])			# default = 127.0.0.1
- -rp	remote port # (e.g., [-rp 6363])				# default = 6363
- -h		help
+ -m	mode ([-m accept] or [-m drop])                 # default = accept
+ -w	# of items in whitelist (e.g., [-w 1000000])    # default = 1000000
+ -b	# of items in blacklist (e.g., [-b 1000000])    # default = 1000000
+ -lp	local port # (e.g., [-lp 6361])                 # default = 6361
+ -lpc	local port # for command (e.g., [-lpc 6362])    # default = 6362
+ -ra	remote address (e.g., [-ra 127.0.0.1])          # default = 127.0.0.1
+ -rp	remote port # (e.g., [-rp 6363])                # default = 6363
+ -h	help
 ```
 
 ### NDN Firewall Online Command
